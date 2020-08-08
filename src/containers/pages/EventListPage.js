@@ -1,63 +1,42 @@
-import React, {Component} from 'react';
+import React, {useEffect} from 'react';
 
-import logo from '../../resources/logo.png';
-import EventTile from '../../components/General/EventTile.js';
-import Navigation from '../../components/General/Navigation.js';
+import {Container, Grid, Button} from '@material-ui/core';
 
-class EventListPage extends Component {
+import {useDispatch, useSelector} from "react-redux";
+import {addEvent, updateEvents} from "../../store/events/eventActions";
 
-    constructor(props) {
-        super(props);
-        this.state = {};
+const EventListPage = () => {
 
+    const dispatch = useDispatch();
+    const eventsList = useSelector(s => s.event.events);
 
+    useEffect(() => {
+        dispatch(updateEvents());
+    }, [dispatch])
+
+    const handleAddEvent = () => {
+        dispatch(addEvent('new event string'));
     }
 
-    componentDidMount() {
-        fetch('/events')
-            .then(res => res.json())
-            .then(
-                (result) => this.setState(
-                    {
-                        isLoaded: true,
-                        events: result
-                    }
-                )
-            )
-    }
+    const eventJSX = eventsList.map((event, i) => (
+        <Grid item xs={12} key={i}>
+            {event}
+        </Grid>
+    ))
 
-    componentDidUpdate() {
-        console.log(this.state);
-    }
-
-    render() {
-        let listItems;
-
-        if (this.state.events) {
-            listItems = this.state.events.map((event, index) => (
-                <li key={index}>
-                    <EventTile
-                        eventName={event.eventName}
-                        clubName={event.clubName}
-                        dateTime={event.dateTime}
-                    />
-                </li>
-            ));
-        } else {
-            listItems = [];
-        }
-
-
-        return (
-            <div>
-                <img src={logo} alt='Logo'/>
-                <Navigation/>
-
-                <ul>{listItems}</ul>
-
-            </div>
-        );
-    }
+    return (
+        <Container>
+            <Grid container>
+                <Grid item xs={12}>
+                    <Button onClick={handleAddEvent}
+                            variant={"contained"}
+                            color={'primary'}
+                    >Add Event</Button>
+                </Grid>
+                {eventJSX}
+            </Grid>
+        </Container>
+    )
 
 }
 

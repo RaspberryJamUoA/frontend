@@ -5,6 +5,6 @@ export const LoginSuccess = (user) => makeAction(LOGIN_SUCCESS, user)
 
 export const Login = (username, password) => {
     return (dispatch, store) => {
-        dispatch(LOGIN_SUCCESS)
+        dispatch(LoginSuccess())
     }
 }

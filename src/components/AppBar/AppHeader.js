@@ -37,6 +37,10 @@ export const AppHeader = () => {
                     !loggedIn &&
                     <Button color="inherit" onClick={handleLogin}>Login</Button>
                 }
+                {
+                    loggedIn &&
+                    <Typography variant={"h6"}>Welcome User!</Typography>
+                }
             </Toolbar>
         </AppBar>
     )
