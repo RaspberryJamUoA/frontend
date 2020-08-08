@@ -1,8 +1,10 @@
-import {Button, IconButton, makeStyles, Toolbar, Typography, AppBar} from "@material-ui/core";
+import {AppBar, IconButton, makeStyles, Toolbar, Typography} from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import React from "react";
-import {useDispatch, useSelector} from "react-redux";
-import {Login} from "../../store/user/userActions";
+import {useSelector} from "react-redux";
+import {LoginButton} from '../Auth/LoginButton';
+import {LogoutButton} from '../Auth/LogoutButton';
+import {useAuth0} from '@auth0/auth0-react';
 
 const useStyles = makeStyles((theme) => ({
     menuButton: {
@@ -15,14 +17,9 @@ const useStyles = makeStyles((theme) => ({
 
 export const AppHeader = () => {
 
-    const dispatch = useDispatch()
     const classes = useStyles();
 
-    const loggedIn = useSelector(s => s.user.loggedIn);
-
-    const handleLogin = () => {
-        dispatch(Login('test', 'test'))
-    }
+    const {isAuthenticated, user} = useAuth0();
 
     return (
         <AppBar position="static">
@@ -34,12 +31,17 @@ export const AppHeader = () => {
                     News
                 </Typography>
                 {
-                    !loggedIn &&
-                    <Button color="inherit" onClick={handleLogin}>Login</Button>
+                    !isAuthenticated &&
+                    <LoginButton/>
                 }
                 {
-                    loggedIn &&
-                    <Typography variant={"h6"}>Welcome User!</Typography>
+                    isAuthenticated &&
+                    (
+                        <React.Fragment>
+                            <Typography variant={"h6"}>Hello {user.name}!</Typography>
+                            <LogoutButton/>
+                        </React.Fragment>
+                    )
                 }
             </Toolbar>
         </AppBar>

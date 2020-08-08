@@ -1,12 +1,200 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:WPF-002" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:WPF-001" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:WPF-002" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2c40437c-c9a5-4722-b6e2-204914905e95" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Auth/LoginButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Auth/LogoutButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AppBar/AppHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppBar/AppHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/user/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user/userActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/user/userReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user/userReducer.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1foP0IN1oXCD3PrAp1kMzVM7kis" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="sortByType" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.16.1" />
+    <property name="javascript.nodejs.core.library.typings.version" value="12.12.54" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Development\Dev_React\raspberryjam\frontend\src\components\Auth" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="open chesspower-frontend" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2c40437c-c9a5-4722-b6e2-204914905e95" name="Default Changelist" comment="" />
+      <created>1596881247967</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596881247967</updated>
+      <workItem from="1596881249791" duration="2892000" />
+    </task>
+    <task id="LOCAL-00001" summary="fix event listing not updating">
+      <created>1596881597267</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1596881597267</updated>
+    </task>
+    <task id="LOCAL-00002" summary="implement router">
+      <created>1596882435063</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1596882435063</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix event listing not updating" />
+    <MESSAGE value="implement router" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement router" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="764" y="367" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596881287817">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="764" y="367" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.1.1920.1050/0.0.2560.1410/2560.0.3072.1698@0.0.2560.1410" timestamp="1596881287817" />
+    <state width="420" height="1134" key="GridCell.Tab.0.bottom" timestamp="1596883376284">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="420" height="1134" key="GridCell.Tab.0.bottom/-1920.1.1920.1050/0.0.2560.1410/2560.0.3072.1698@0.0.2560.1410" timestamp="1596883376284" />
+    <state width="420" height="1134" key="GridCell.Tab.0.center" timestamp="1596883376284">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="420" height="1134" key="GridCell.Tab.0.center/-1920.1.1920.1050/0.0.2560.1410/2560.0.3072.1698@0.0.2560.1410" timestamp="1596883376284" />
+    <state width="420" height="1134" key="GridCell.Tab.0.left" timestamp="1596883376284">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="420" height="1134" key="GridCell.Tab.0.left/-1920.1.1920.1050/0.0.2560.1410/2560.0.3072.1698@0.0.2560.1410" timestamp="1596883376284" />
+    <state width="420" height="1134" key="GridCell.Tab.0.right" timestamp="1596883376284">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="420" height="1134" key="GridCell.Tab.0.right/-1920.1.1920.1050/0.0.2560.1410/2560.0.3072.1698@0.0.2560.1410" timestamp="1596883376284" />
+    <state x="856" y="357" key="SettingsEditor" timestamp="1596883033760">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="856" y="357" key="SettingsEditor/-1920.1.1920.1050/0.0.2560.1410/2560.0.3072.1698@0.0.2560.1410" timestamp="1596883033760" />
+    <state x="902" y="441" key="Vcs.Push.Dialog.v2" timestamp="1596882437147">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="902" y="441" key="Vcs.Push.Dialog.v2/-1920.1.1920.1050/0.0.2560.1410/2560.0.3072.1698@0.0.2560.1410" timestamp="1596882437147" />
+    <state x="1001" y="326" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1596883291282">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="1001" y="326" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/-1920.1.1920.1050/0.0.2560.1410/2560.0.3072.1698@0.0.2560.1410" timestamp="1596883291282" />
+    <state x="1011" y="338" width="672" height="677" key="run.anything.popup" timestamp="1596882222438">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="1011" y="338" width="672" height="677" key="run.anything.popup/-1920.1.1920.1050/0.0.2560.1410/2560.0.3072.1698@0.0.2560.1410" timestamp="1596882222438" />
+    <state x="1018" y="404" width="672" height="678" key="search.everywhere.popup" timestamp="1596883027518">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="1018" y="404" width="672" height="678" key="search.everywhere.popup/-1920.1.1920.1050/0.0.2560.1410/2560.0.3072.1698@0.0.2560.1410" timestamp="1596883027518" />
   </component>
 </project>
