@@ -1,6 +1,7 @@
 import React from 'react';
 import {
-    makeStyles
+    makeStyles,
+    CssBaseline
 } from "@material-ui/core";
 import clsx from 'clsx';
 
@@ -19,6 +20,7 @@ function App() {
 
     return (
         <div className={clsx(classes.root)}>
+            <CssBaseline />
             <AppHeader/>
             <EventListPage />;
         </div>
