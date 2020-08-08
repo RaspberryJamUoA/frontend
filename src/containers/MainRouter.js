@@ -5,6 +5,7 @@ import {AppHeader} from "../components/AppBar/AppHeader";
 
 import EventListPage from "./pages/EventListPage";
 import React from "react";
+import EventDetailsPage from "./pages/EventDetailsPage";
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -23,6 +24,7 @@ const MainRouter = () => {
                 <Switch>
                     <Route exact path={'/'} component={EventListPage}/>
                     <Route exact path={'/events'} component={EventListPage}/>
+                    <Route exact path={'/events/:id'} component={EventDetailsPage}/>
                     <Route component={() => 'notfound'}/>
                 </Switch>
             </div>
