@@ -1,7 +1,8 @@
 import React from 'react';
 import {
     makeStyles,
-    CssBaseline
+    CssBaseline,
+    ThemeProvider
 } from "@material-ui/core";
 import {Provider} from 'react-redux';
 import clsx from 'clsx';
