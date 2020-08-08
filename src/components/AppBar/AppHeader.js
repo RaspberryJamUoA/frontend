@@ -1,6 +1,8 @@
 import {Button, IconButton, makeStyles, Toolbar, Typography, AppBar} from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import React from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {Login} from "../../store/user/userActions";
 
 const useStyles = makeStyles((theme) => ({
     menuButton: {
@@ -13,7 +15,14 @@ const useStyles = makeStyles((theme) => ({
 
 export const AppHeader = () => {
 
+    const dispatch = useDispatch()
     const classes = useStyles();
+
+    const loggedIn = useSelector(s => s.user.loggedIn);
+
+    const handleLogin = () => {
+        dispatch(Login('test', 'test'))
+    }
 
     return (
         <AppBar position="static">
@@ -24,7 +33,10 @@ export const AppHeader = () => {
                 <Typography variant="h6" className={classes.title}>
                     News
                 </Typography>
-                <Button color="inherit">Login</Button>
+                {
+                    !loggedIn &&
+                    <Button color="inherit" onClick={handleLogin}>Login</Button>
+                }
             </Toolbar>
         </AppBar>
     )

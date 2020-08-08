@@ -1,11 +1,16 @@
 import React from 'react';
 import {
-    makeStyles
+    makeStyles,
+    ThemeProvider
 } from "@material-ui/core";
+import {Provider} from 'react-redux';
 import clsx from 'clsx';
+import {mainTheme} from "../styles/theme";
+import {defaultStore} from '../store/store';
 
-import EventListPage from "./pages/EventListPage";
 import {AppHeader} from "../components/AppBar/AppHeader";
+import EventListPage from "./pages/EventListPage";
+
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -18,10 +23,14 @@ function App() {
     const classes = useStyles();
 
     return (
-        <div className={clsx(classes.root)}>
-            <AppHeader/>
-            <EventListPage />;
-        </div>
+        <ThemeProvider theme={mainTheme}>
+            <Provider store={defaultStore}>
+                <div className={clsx(classes.root)}>
+                    <AppHeader/>
+                    <EventListPage/>;
+                </div>
+            </Provider>
+        </ThemeProvider>
     );
 }
 
