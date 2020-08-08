@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// Pages
+
+import EventListPage from './pages/EventListPage.js';
+import EventPage from './pages/EventPage.js';
+import LoginPage from './pages/LoginPage.js';
+
+
+class App extends React.Component {
+
+  componentDidMount() {
+    // Make something call here to get all event tiles
+  }
+
+  render() {
+    return <EventListPage />;
+  }
 }
 
 export default App;
