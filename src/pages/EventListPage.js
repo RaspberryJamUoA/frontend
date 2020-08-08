@@ -31,16 +31,29 @@ class EventListPage extends Component {
   }
 
   render() {
+    let listItems;
+
+    if (this.state.events) {
+      listItems = this.state.events.map((event, index) => (
+        <li key={index}>
+          <EventTile
+            eventName={ event.eventName }
+            clubName={ event.clubName }
+            dateTime={ event.dateTime }
+          />
+        </li>
+      ));
+    } else {
+      listItems = [];
+    }
+
+
     return (
       <div>
         <img src={ logo } alt='Logo' />
         <Navigation />
 
-        <EventTile
-          eventName='Event Name'
-          clubName='WDCC'
-          dateTime='Thursday, 22nd July'
-        />
+        <ul>{ listItems }</ul>
 
       </div>
     );
