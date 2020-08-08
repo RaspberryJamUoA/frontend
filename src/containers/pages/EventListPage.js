@@ -15,7 +15,7 @@ class EventListPage extends React.Component {
         console.log('render',this.props.events)
 
         const eventJSX = this.props.events.map((event, i) => (<Grid item="item" xs={12} key={i}>
-            {event.clubName}
+            {JSON.stringify(event)}
         </Grid>));
 
         // console.log(this.props.eventsList)

@@ -3,15 +3,15 @@ import * as colors from '@material-ui/core/colors';
 
 export const mainTheme = createMuiTheme({
         palette: {
-            type: 'dark',
+            type: 'light',
             primary: colors.blue,
             secondary: colors.deepPurple,
             background: {
-                default: colors.grey[900],
-                paper: colors.grey[800]
+                default: colors.grey[100],
+                paper: colors.grey[200]
             },
             text: {
-                primary: colors.common.white,
+                primary: colors.common.black,
                 secondary: colors.blueGrey['50']
             },
         }
