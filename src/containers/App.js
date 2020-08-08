@@ -10,6 +10,8 @@ import {
 import MenuIcon from '@material-ui/icons/Menu';
 import clsx from 'clsx';
 
+import EventListPage from "./pages/EventListPage";
+
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -41,6 +43,7 @@ function App() {
             <Button variant="contained" color="primary">
                 Hello World
             </Button>
+            <EventListPage />;
         </div>
     );
 }

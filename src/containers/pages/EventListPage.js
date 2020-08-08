@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import logo from '../resources/logo.png';
-import EventTile from '../components/EventTile.js';
-import Navigation from '../components/Navigation.js';
+import logo from '../../resources/logo.png';
+import EventTile from '../../components/EventTile.js';
+import Navigation from '../../components/Navigation.js';
 
 class EventListPage extends Component {
 
