@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 class EventPage extends Component {
 
-  render() {
-    return (
-      <div></div>
-    );
-  }
+    render() {
+        return (
+            <div></div>
+        );
+    }
 
 }
 
