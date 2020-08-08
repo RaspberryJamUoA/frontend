@@ -1,7 +1,8 @@
 import {LOGIN_SUCCESS} from "./userActions";
 
 const initialState = {
-    loggedIn: false
+    loggedIn: false,
+    
 }
 
 const userReducer = (state = initialState, action) => {
