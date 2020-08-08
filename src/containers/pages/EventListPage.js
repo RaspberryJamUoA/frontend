@@ -2,42 +2,38 @@ import React, {useEffect} from 'react';
 
 import {Container, Grid, Button} from '@material-ui/core';
 
-import {useDispatch, useSelector} from "react-redux";
-import {addEvent, updateEvents} from "../../store/events/eventActions";
+import {connect} from "react-redux";
+import {updateEvents} from "../../store/events/eventActions";
 
-const EventListPage = () => {
+class EventListPage extends React.Component {
 
-    const dispatch = useDispatch();
-    const eventsList = useSelector(s => s.event.events);
-
-    useEffect(() => {
-        dispatch(updateEvents());
-    }, [dispatch])
-
-    const handleAddEvent = () => {
-        dispatch(addEvent('new event string'));
+    constructor(props) {
+        super(props);
     }
 
-    const eventJSX = eventsList.map((event, i) => (
-        <Grid item xs={12} key={i}>
-            {event}
-        </Grid>
-    ))
+    componentDidMount() {
+        this.props.updateEvents()
+    }
 
-    return (
-        <Container>
-            <Grid container>
-                <Grid item xs={12}>
-                    <Button onClick={handleAddEvent}
-                            variant={"contained"}
-                            color={'primary'}
-                    >Add Event</Button>
-                </Grid>
-                {eventJSX}
-            </Grid>
-        </Container>
-    )
+    render() {
+        console.log('render',this.props.eventsList)
+        const eventJSX = this.props.eventsList.map((event, i) => (<Grid item="item" xs={12} key={i}>
+            {event.clubName}
+        </Grid>));
 
+        // console.log(this.props.eventsList)
+
+        return (<React.Fragment>
+            {eventJSX}
+        </React.Fragment>);
+    }
 }
 
-export default EventListPage;
+const mapStateToProps = state => {
+    console.log('map', state)
+    return {
+        eventsList: state.event.events
+    }
+};
+
+export default connect(mapStateToProps, {updateEvents})(EventListPage);

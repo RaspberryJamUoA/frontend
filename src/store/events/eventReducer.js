@@ -8,6 +8,7 @@ const eventReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case SET_EVENTS:
+            console.log(action.payload)
             state.events = action.payload;
             break;
         case ADD_EVENT:

@@ -1,14 +1,16 @@
-import {fetchEvents} from "../../api/events";
-import {makeAction} from "../factory/makeAction";
+
+import {
+    makeAction
+} from "../factory/makeAction";
 
 export const SET_EVENTS = 'SET_EVENTS';
 const setEvents = (eventList) => makeAction(SET_EVENTS, eventList);
 
 export const updateEvents = () => {
     return async (dispatch, store) => {
-        // const res = await fetchEvents();
-
-        // dispatch(setEvents(res.data))
+        const result = await fetch('/events');
+        if (!result) return;
+        dispatch(setEvents(await result.json()))
     }
 }
 

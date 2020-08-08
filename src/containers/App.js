@@ -28,8 +28,8 @@ function App() {
             <Provider store={defaultStore}>
                 <div className={clsx(classes.root)}>
                     <CssBaseline />
-                    <AppHeader/>
-                    <EventListPage/>;
+                    <AppHeader />
+                    <EventListPage />
                 </div>
             </Provider>
         </ThemeProvider>
