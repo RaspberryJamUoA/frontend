@@ -1,7 +1,7 @@
 import React from 'react';
 import {
     makeStyles,
-    ThemeProvider
+    CssBaseline
 } from "@material-ui/core";
 import {Provider} from 'react-redux';
 import clsx from 'clsx';
@@ -26,6 +26,7 @@ function App() {
         <ThemeProvider theme={mainTheme}>
             <Provider store={defaultStore}>
                 <div className={clsx(classes.root)}>
+                    <CssBaseline />
                     <AppHeader/>
                     <EventListPage/>;
                 </div>
