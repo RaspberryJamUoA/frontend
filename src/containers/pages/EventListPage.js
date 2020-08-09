@@ -1,6 +1,6 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 
-import {Container, Grid, Button} from '@material-ui/core';
+import {Grid} from '@material-ui/core';
 
 import {connect} from "react-redux";
 import {updateEvents} from "../../store/events/eventActions";
@@ -12,11 +12,12 @@ class EventListPage extends React.Component {
     }
 
     render() {
-        console.log('render',this.props.events)
 
-        const eventJSX = this.props.events.map((event, i) => (<Grid item="item" xs={12} key={i}>
-            {JSON.stringify(event)}
-        </Grid>));
+        const eventJSX = this.props.events.map((event, i) => (
+            <Grid item xs={12} key={i}>
+                {JSON.stringify(event)}
+            </Grid>)
+        );
 
         // console.log(this.props.eventsList)
 
