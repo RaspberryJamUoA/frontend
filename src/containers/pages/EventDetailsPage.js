@@ -1,5 +1,5 @@
 import React from 'react';
-import {Paper, Container, createStyles, Grid, Typography, Tooltip, Divider} from '@material-ui/core';
+import {Container, createStyles, Grid, Paper, Tooltip, Typography} from '@material-ui/core';
 import {makeStyles} from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 

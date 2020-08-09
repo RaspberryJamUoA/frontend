@@ -1,7 +1,6 @@
 import {AppBar, IconButton, makeStyles, Toolbar, Typography} from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import React from "react";
-import {useSelector} from "react-redux";
 import {LoginButton} from '../Auth/LoginButton';
 import {LogoutButton} from '../Auth/LogoutButton';
 import {useAuth0} from '@auth0/auth0-react';
