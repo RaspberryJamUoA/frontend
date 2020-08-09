@@ -24,7 +24,7 @@ class EventTile extends Component {
 
     formatDate() {
         const date = new Date(this.props.dateTime);
-        return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes() + "0";
+        return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + ' ' + date.getHours() + ':' + ((date.getMinutes() < 10) ? '0' +date.getMinutes() : date.getMinutes()) ;
     }
 
     useStyles() {
