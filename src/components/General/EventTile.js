@@ -44,7 +44,7 @@ const EventTile = (props) => {
     const dateString = formatDate();
 
     return (
-        <Paper className={classes.paper}>
+        <Paper className={classes.paper} elevation={4}>
             <Grid container>
 
                 <Grid item xs={6}>

@@ -29,11 +29,13 @@ const EventListPage = () => {
 
     return (
         <React.Fragment>
-            <SearchBar/>
             <Container>
                 <Grid container spacing={3} style={{
-                    marginTop: theme.spacing(4)
+                    marginTop: theme.spacing(2)
                 }}>
+                    <Grid item xs={12}>
+                        <SearchBar/>
+                    </Grid>
                     {eventJSX}
                 </Grid>
             </Container>

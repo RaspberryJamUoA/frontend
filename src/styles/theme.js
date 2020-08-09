@@ -20,8 +20,8 @@ export const mainTheme = createMuiTheme({
             primary: colors.blue,
             secondary: colors.deepPurple,
             background: {
-                default: colors.grey[200],
-                paper: colors.grey[50]
+                default: colors.grey[50],
+                paper: '#fafafa'
             },
             text: {
                 primary: '#14487e',

@@ -106,7 +106,7 @@ const EventDetailsPage = () => {
                             by {clubData.clubName}</Typography>
                     </Grid>
                 </Grid>
-                <Paper className={classes.paper}>
+                <Paper className={classes.paper} elevation={4}>
                     <Grid container spacing={1}>
                         <Grid item xs={12} container spacing={1} alignItems={"center"}>
                             <Grid item>
