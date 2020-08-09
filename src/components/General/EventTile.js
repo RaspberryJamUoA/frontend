@@ -1,60 +1,81 @@
-import React, { Component } from 'react';
+import React, {useState} from 'react';
 import './EventTile.css'
+import {Link} from 'react-router-dom';
+import {colors} from "../../styles/colors";
+import {Grid, Button, Paper, createStyles} from '@material-ui/core';
+import {makeStyles} from "@material-ui/core/styles";
+
+const styles = makeStyles((theme) => createStyles({
+    paper: {
+        padding: theme.spacing(4)
+    },
+    button: {
+        backgroundColor: colors.blue["1"],
+        color: theme.palette.text.secondary
+    }
+}));
 
 /* Takes props eventName, dateTime, clubName, image, clubLogo */
-class EventTile extends Component {
+const EventTile = (props) => {
 
-    constructor(props) {
-        super(props);
+    const classes = styles();
 
-        this.state = {
-            liked: false
-        }
+    const [liked, setLiked] = useState(false);
+
+    function handleLikeClicked() {
+        setLiked(!liked)
     }
 
-    handleLikeClicked() {
-        this.setState({
-            liked: !this.state.liked
-        })
+    function heartSrc() {
+        return liked ? 'https://i.imgur.com/JwXaLtf.png' : 'https://i.imgur.com/x4vFBKq.png';
     }
 
-    heartSrc() {
-        return this.state.liked ? 'https://i.imgur.com/JwXaLtf.png' : 'https://i.imgur.com/x4vFBKq.png';
+    function formatDate() {
+        const date = new Date(props.dateTime);
+        return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + ' ' + date.getHours() + ':' + ((date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes());
     }
 
-    formatDate() {
-        const date = new Date(this.props.dateTime);
-        return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + ' ' + date.getHours() + ':' + ((date.getMinutes() < 10) ? '0' +date.getMinutes() : date.getMinutes()) ;
-    }
+    const linkTo = '/events/' + props.id;
 
-    useStyles() {
+    const dateString = formatDate();
 
-    }
+    return (
+        <Paper className={classes.paper}>
+            <Grid container>
 
-    render() {
-        console.log(this.props.imgLink);
-        const dateString = this.formatDate();
-        return (
-            <div className="body">
-                <div className="events">
-                    <div className='cardContent'>
-                        <h2 className="title"><strong>{this.props.eventName}</strong></h2>
-                        <h5 className="date"><i className='far fa-calendar-alt'></i>  {dateString} </h5>
-                        <h5> <i className='fas fa-dollar-sign'></i> {(this.props.cost > 0) ?  this.props.cost : 'Free' }</h5>
-                        <p className="description">{(this.props.description.length > 320) ? this.props.description.substring(0,320) + "\u2022 \u2022 \u2022" :this.props.description}</p>
+                <Grid item xs={6}>
+                    <h2 className="title">
+                        <Link to={linkTo} style={{
+                            textDecoration: 'none',
+                            color: colors.blue["1"]
+                        }}>
+                            <strong>{props.eventName}</strong>
+                        </Link>
+                    </h2>
+                    <h5 className="date"><i className='far fa-calendar-alt'/> {dateString} </h5>
+                    <h5><i className='fas fa-dollar-sign'/> {(props.cost > 0) ? props.cost : 'Free'}
+                    </h5>
+                    <p className="description">{(props.description.length > 270) ? props.description.substring(0, 270) + "\u2022 \u2022 \u2022" : props.description}</p>
+                </Grid>
+
+                <Grid item xs={6} container justify={"center"}>
+                    <div className="heartOverlay" onClick={() => handleLikeClicked()}>
+                        <img id="heart" className="loveHeart" src={heartSrc()} alt="heartImg" width="50px"
+                             height="50px"/>
                     </div>
+                    <img className="eventImage" src={props.imgLink} alt="eventImg" width="400px"
+                         height="300px"/>
+                </Grid>
 
-                    <div className="imgContainer">
-                        <div className="heartOverlay" onClick={() => this.handleLikeClicked()}> 
-                            <img id="heart" className="loveheart" src={this.heartSrc()} alt="heartImg" width="50px" height="50px"></img>
-                        </div>
-                        <img className="eventImage" src={this.props.imgLink} alt="eventImg" width="400px" height="300px" ></img>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+                <Grid item xs={12}>
+                    <Button variant={"contained"} className={classes.button} fullWidth
+                            component={Link} to={linkTo}
+                    >View details</Button>
+                </Grid>
 
+            </Grid>
+        </Paper>
+    );
 }
 
 export default EventTile;

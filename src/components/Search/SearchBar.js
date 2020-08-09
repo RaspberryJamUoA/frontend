@@ -1,9 +1,9 @@
-import React, { Component, useState } from 'react';
+import React, {useState} from 'react';
 
-import {Container, createStyles, Grid, Paper, Tooltip, Typography, TextField, sizing} from '@material-ui/core';
+import {Paper, TextField} from '@material-ui/core';
 import {makeStyles} from "@material-ui/core/styles";
 import {setEvents} from "../../store/events/eventActions";
-import {useSelector, useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 
 const useStyles = makeStyles((theme) => ({
     search: {
@@ -18,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
 export const SearchBar = () => {
 
     const fullList = useSelector(s => s.event.initialEvents);
-    const eventsList = useSelector(s => s.event.events);
     const dispatch = useDispatch();
     const classes = useStyles();
 
@@ -27,7 +26,7 @@ export const SearchBar = () => {
 
     const filterEvents = (searchTerm) => {
         const newEvents = fullList.filter(event => {
-            if (searchTerm == null || searchTerm == "" || searchTerm == " ") {
+            if (searchTerm == null || searchTerm === "" || searchTerm === " ") {
                 return true;
             }
 
@@ -40,6 +39,7 @@ export const SearchBar = () => {
             if ((event.description).toLowerCase().includes(searchTerm.toLowerCase())) {
                 return true;
             }
+            return false;
         })
 
         dispatch(setEvents(newEvents));

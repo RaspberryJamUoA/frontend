@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 
 import SearchBar from '../../components/Search/SearchBar';
-import {Grid} from '@material-ui/core';
+import {Grid, Container, useTheme} from '@material-ui/core';
 
 import {useDispatch, useSelector} from "react-redux";
 import {updateEvents} from "../../store/events/eventActions";
@@ -11,15 +11,16 @@ const EventListPage = () => {
 
     const dispatch = useDispatch();
     const events = useSelector(s => s.event.events);
+    const theme = useTheme()
 
     useEffect(() => {
         dispatch(updateEvents());
-    }, [])
+    }, [dispatch])
 
 
     const eventJSX = events.map((event, i) => (
         <Grid item xs={12} key={i}>
-            <EventTile eventName={event.eventName} dateTime={event.dateTime} clubName={event.clubName}
+            <EventTile id={event['_id']} eventName={event.eventName} dateTime={event.dateTime} clubName={event.clubName}
                        description={event.description} cost={event.cost} imgLink={event.imageLink}/>
         </Grid>)
     );
@@ -29,7 +30,13 @@ const EventListPage = () => {
     return (
         <React.Fragment>
             <SearchBar/>
-            {eventJSX}
+            <Container>
+                <Grid container spacing={3} style={{
+                    marginTop: theme.spacing(4)
+                }}>
+                    {eventJSX}
+                </Grid>
+            </Container>
         </React.Fragment>
     );
 

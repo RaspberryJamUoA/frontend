@@ -3,7 +3,7 @@
     font-size: 2.5rem;
     color: #00467f;
     font-weight: normal;
-    padding-top: 40;
+    padding-top: 40px;
     margin: 0;
     text-align: left;
 }
@@ -15,7 +15,7 @@
 }
 
 .events {
-    width: 100% - 100px;
+    width: calc(100% - 100px);
     margin: 100px 100px 100px 100px;
     text-align: justify;
     line-height: 2;
@@ -43,13 +43,12 @@
     margin-left: 20px;
   }
 
-.loveheart {
+.loveHeart {
   position: relative;
   top: 284px;
-  padding-right: 10;
+  padding-right: 10px;
   left: 340px;
   z-index: 12;
-  color:none;
 }
 
 .imgContainer {
