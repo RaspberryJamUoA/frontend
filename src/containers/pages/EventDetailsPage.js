@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Container, createStyles, Grid, Paper, Tooltip, Typography} from '@material-ui/core';
 import {makeStyles} from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import {useParams} from 'react-router-dom';
+import {colors} from "../../styles/colors";
 
 
 const styles = makeStyles(theme => createStyles({
@@ -42,19 +44,47 @@ const styles = makeStyles(theme => createStyles({
     },
     heroText: {
         color: 'white'
+    },
+    blueButton: {
+        backgroundColor: colors.blue["1"]
     }
 }))
 
+// export interface IEvent {
+//     eventName: string
+//     description: string
+//     dateTime: Date
+//     clubName: string
+//     cost: number
+//     location: string
+//     membershipRequired: boolean
+//     keywords: string[]
+// }
 
 const EventDetailsPage = () => {
 
-    const classes = styles();
+    const {id} = useParams();
 
-    const clubData = {
-        clubName: "WDCC x AUCS",
-        eventName: "WDCC x AUCS Hack Weekend",
-        date: new Date().toDateString()
-    }
+    const classes = styles();
+    const [clubData, setClubData] = useState(null);
+
+    useEffect(() => {
+        fetch('/events/' + id)
+            .then(result => result.json())
+            .then(data => {
+                setClubData(data);
+            })
+    }, [id])
+
+    console.log(clubData);
+
+    // const clubData = {
+    //     clubName: "WDCC x AUCS",
+    //     eventName: "WDCC x AUCS Hack Weekend",
+    //     date: new Date().toDateString()
+    // }
+
+    if (!clubData) return null;
 
     return (
         <React.Fragment>
@@ -112,24 +142,13 @@ const EventDetailsPage = () => {
                         </Grid>
                         <Grid item xs={12}>
                             <Typography variant={"body2"}>
-                                Our "Hack Weekend" will be focused on student learning experiences, so, if you've always
-                                wanted
-                                to
-                                participate in
-                                a hackathon-style event, but unsure whether if you have the "right skills" to
-                                participate in
-                                them,
-                                this is
-                                your
-                                opportunity! You will get to learn how to build a React application from scratch using
-                                the MERN
-                                stack!
-                                (MongoDB,
-                                Express, React, Node.js
+                                {clubData.description}
                             </Typography>
                         </Grid>
                         <Grid item xs={12}>
-                            <Button variant={"contained"} fullWidth color={"primary"}>
+                            <Button variant={"contained"} fullWidth color={"primary"}
+                                    className={classes.blueButton}
+                            >
                                 Sign Up!
                             </Button>
                         </Grid>

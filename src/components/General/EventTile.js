@@ -27,6 +27,10 @@ class EventTile extends Component {
         return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes() + "0";
     }
 
+    useStyles() {
+
+    }
+
     render() {
         const dateString = this.formatDate();
 
