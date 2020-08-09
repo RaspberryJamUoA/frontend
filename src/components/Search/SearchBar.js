@@ -18,15 +18,14 @@ const useStyles = makeStyles((theme) => ({
 export const SearchBar = () => {
 
     const fullList = useSelector(s => s.event.initialEvents);
-    const eventsList = useSelector(s => s.event.events)
+    const eventsList = useSelector(s => s.event.events);
     const dispatch = useDispatch();
     const classes = useStyles();
 
-    const [searchTerm, setSearchTerm] = useState('');
     const [timer, setTimer] = useState(null);
 
 
-    const filterEvents = () => {
+    const filterEvents = (searchTerm) => {
         const newEvents = fullList.filter(event => {
             if (searchTerm == null || searchTerm == "" || searchTerm == " ") {
                 return true;
@@ -37,26 +36,21 @@ export const SearchBar = () => {
             }
         })
 
-        console.log("New Events Set");
-        console.log(newEvents);
         dispatch(setEvents(newEvents));
-        console.log(eventsList);
     }
 
-    const queueNewSearchEvent = () => {
-        console.log("Queued");
+    const queueNewSearchEvent = (newTerm) => {
         if (timer !== null) clearTimeout(timer);
 
         const newTimer = setTimeout(() => {
-            filterEvents()
+            filterEvents(newTerm)
         }, 300);
 
         setTimer(newTimer);
     }
 
     const handleSearchChange = (newTerm) => {
-        setSearchTerm(newTerm);
-        queueNewSearchEvent();
+        queueNewSearchEvent(newTerm);
     }
 
     return (
@@ -66,8 +60,7 @@ export const SearchBar = () => {
                 id='outlined-basic'
                 className={classes.search}
                 placeholder="Search for an event"
-                value={searchTerm}
-                onChange={e => handleSearchChange(e.target.value)}
+                onChange={e => {handleSearchChange(e.target.value)}}
             />
         </Paper>
     );
