@@ -126,7 +126,7 @@
       <option name="presentableId" value="Default" />
       <updated>1596857747691</updated>
       <workItem from="1596857749319" duration="11684000" />
-      <workItem from="1596926890639" duration="8618000" />
+      <workItem from="1596926890639" duration="8959000" />
     </task>
     <task id="LOCAL-00001" summary="colors">
       <created>1596926074531</created>
@@ -170,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596937413771</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="frontend styling appbar">
+      <created>1596940368442</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1596940368442</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +202,8 @@
     <MESSAGE value="fix import and errors" />
     <MESSAGE value="header spacing" />
     <MESSAGE value="event listing fetch implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="event listing fetch implemented" />
+    <MESSAGE value="frontend styling appbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="frontend styling appbar" />
   </component>
   <component name="WindowStateProjectService">
     <state width="518" height="1122" key="GridCell.Tab.0.bottom" timestamp="1596935593069">
@@ -230,9 +238,9 @@
       <screen x="57" y="23" width="1991" height="1257" />
     </state>
     <state x="717" y="306" width="670" height="675" key="run.anything.popup/57.23.1991.1257@57.23.1991.1257" timestamp="1596864375836" />
-    <state x="717" y="308" width="670" height="676" key="search.everywhere.popup" timestamp="1596931820133">
+    <state x="717" y="308" width="670" height="676" key="search.everywhere.popup" timestamp="1596940418442">
       <screen x="57" y="23" width="1991" height="1257" />
     </state>
-    <state x="717" y="308" width="670" height="676" key="search.everywhere.popup/57.23.1991.1257@57.23.1991.1257" timestamp="1596931820133" />
+    <state x="717" y="308" width="670" height="676" key="search.everywhere.popup/57.23.1991.1257@57.23.1991.1257" timestamp="1596940418442" />
   </component>
 </project>
