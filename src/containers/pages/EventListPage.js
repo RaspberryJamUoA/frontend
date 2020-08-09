@@ -1,64 +1,34 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-import logo from '../../resources/logo.png';
-import EventTile from '../../components/General/EventTile.js';
-import Navigation from '../../components/General/Navigation.js';
+import {Grid} from '@material-ui/core';
 
-class EventListPage extends Component {
+import {connect} from "react-redux";
+import {updateEvents} from "../../store/events/eventActions";
 
-    constructor(props) {
-        super(props);
-        this.state = {};
-
-
-    }
+class EventListPage extends React.Component {
 
     componentDidMount() {
-        fetch('/events')
-            .then(res => res.json())
-            .then(
-                (result) => this.setState(
-                    {
-                        isLoaded: true,
-                        events: result
-                    }
-                )
-            )
-    }
-
-    componentDidUpdate() {
-        console.log(this.state);
+        this.props.updateEvents()
     }
 
     render() {
-        let listItems;
 
-        if (this.state.events) {
-            listItems = this.state.events.map((event, index) => (
-                <li key={index}>
-                    <EventTile
-                        eventName={event.eventName}
-                        clubName={event.clubName}
-                        dateTime={event.dateTime}
-                    />
-                </li>
-            ));
-        } else {
-            listItems = [];
-        }
-
-
-        return (
-            <div>
-                <img src={logo} alt='Logo'/>
-                <Navigation/>
-
-                <ul>{listItems}</ul>
-
-            </div>
+        const eventJSX = this.props.events.map((event, i) => (
+            <Grid item xs={12} key={i}>
+                {JSON.stringify(event)}
+            </Grid>)
         );
-    }
 
+        // console.log(this.props.eventsList)
+
+        return (<React.Fragment>
+            {eventJSX}
+        </React.Fragment>);
+    }
 }
 
-export default EventListPage;
+const mapStateToProps = state => ({
+    events: state.event.events
+})
+
+export default connect(mapStateToProps, {updateEvents})(EventListPage);

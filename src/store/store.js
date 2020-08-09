@@ -1,3 +1,11 @@
-import redux from 'redux'
+import {createStore, combineReducers, applyMiddleware} from 'redux';
+import thunk from 'redux-thunk';
+import userReducer from './user/userReducer';
+import eventReducer from "./events/eventReducer";
 
-export const store = redux.createStore();
+const mainReducer = combineReducers({
+    user: userReducer,
+    event: eventReducer
+})
+
+export const defaultStore = createStore(mainReducer, applyMiddleware(thunk));

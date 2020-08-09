@@ -1,6 +1,9 @@
-import {Button, IconButton, makeStyles, Toolbar, Typography, AppBar} from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
 import React from "react";
+import {AppBar, IconButton, makeStyles, Toolbar, Typography, Grid} from "@material-ui/core";
+import MenuIcon from "@material-ui/icons/Menu";
+import {LoginButton} from '../Auth/LoginButton';
+import {LogoutButton} from '../Auth/LogoutButton';
+import {useAuth0} from '@auth0/auth0-react';
 
 const useStyles = makeStyles((theme) => ({
     menuButton: {
@@ -15,6 +18,8 @@ export const AppHeader = () => {
 
     const classes = useStyles();
 
+    const {isAuthenticated, user} = useAuth0();
+
     return (
         <AppBar position="static">
             <Toolbar>
@@ -24,7 +29,23 @@ export const AppHeader = () => {
                 <Typography variant="h6" className={classes.title}>
                     News
                 </Typography>
-                <Button color="inherit">Login</Button>
+                {
+                    !isAuthenticated &&
+                    <LoginButton/>
+                }
+                {
+                    isAuthenticated &&
+                    (
+                        <Grid container spacing={1} alignItems={"center"} justify={"flex-end"}>
+                            <Grid item>
+                                <Typography variant={"h6"}>Hello {user.name}!</Typography>
+                            </Grid>
+                            <Grid item>
+                                <LogoutButton/>
+                            </Grid>
+                        </Grid>
+                    )
+                }
             </Toolbar>
         </AppBar>
     )
