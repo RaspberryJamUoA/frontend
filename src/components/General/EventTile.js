@@ -36,7 +36,7 @@ class EventTile extends Component {
                     <div className='cardContent'>
                         <h2 className="title"><strong>{this.props.eventName}</strong></h2>
                         <h5 className="date"><i className='far fa-calendar-alt'></i>  {dateString}</h5>
-                        <p className="description">{this.props.description}</p>
+                        <p className="description">{(this.props.description.length > 320) ? this.props.description.substring(0,320) + "\u2022 \u2022 \u2022" :this.props.description}</p>
                         <p> <i className='fas fa-dollar-sign'></i> {(this.props.cost > 0) ?  this.props.cost : 'Free' }</p>
                     </div>
 
