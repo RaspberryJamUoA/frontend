@@ -10,6 +10,10 @@ class EventTile extends Component {
         this.state = {}
     }
 
+    useStyles() {
+
+    }
+
     render() {
         return (
             <div>
