@@ -12,6 +12,10 @@ const styles = makeStyles((theme) => createStyles({
     button: {
         backgroundColor: colors.blue["1"],
         color: theme.palette.text.secondary
+    },
+    loveHeart: {
+        cursor: 'pointer',
+        verticalAlign: 'middle'
     }
 }));
 
@@ -51,6 +55,8 @@ const EventTile = (props) => {
                         }}>
                             <strong>{props.eventName}</strong>
                         </Link>
+                        <img onClick={handleLikeClicked} id="heart" className={classes.loveHeart} src={heartSrc()} alt="heartImg" width="50px"
+                             height="50px"/>
                     </h2>
                     <h5 className="date"><i className='far fa-calendar-alt'/> {dateString} </h5>
                     <h5><i className='fas fa-dollar-sign'/> {(props.cost > 0) ? props.cost : 'Free'}
@@ -59,10 +65,6 @@ const EventTile = (props) => {
                 </Grid>
 
                 <Grid item xs={6} container justify={"center"}>
-                    <div className="heartOverlay" onClick={() => handleLikeClicked()}>
-                        <img id="heart" className="loveHeart" src={heartSrc()} alt="heartImg" width="50px"
-                             height="50px"/>
-                    </div>
                     <img className="eventImage" src={props.imgLink} alt="eventImg" width="400px"
                          height="300px"/>
                 </Grid>
