@@ -3,6 +3,7 @@ import {Container, createStyles, Grid, Paper, Tooltip, Typography} from '@materi
 import {makeStyles} from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import {useParams} from 'react-router-dom';
+import {colors} from "../../styles/colors";
 
 
 const styles = makeStyles(theme => createStyles({
@@ -43,6 +44,9 @@ const styles = makeStyles(theme => createStyles({
     },
     heroText: {
         color: 'white'
+    },
+    blueButton: {
+        backgroundColor: colors.blue["1"]
     }
 }))
 
@@ -142,7 +146,9 @@ const EventDetailsPage = () => {
                             </Typography>
                         </Grid>
                         <Grid item xs={12}>
-                            <Button variant={"contained"} fullWidth color={"primary"}>
+                            <Button variant={"contained"} fullWidth color={"primary"}
+                                    className={classes.blueButton}
+                            >
                                 Sign Up!
                             </Button>
                         </Grid>

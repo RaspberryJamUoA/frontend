@@ -19,7 +19,12 @@ const EventListPage = () => {
 
     const eventJSX = events.map((event, i) => (
         <Grid item xs={12} key={i}>
-            <Link to={'/events/' + event['_id']} className>
+            <Link to={'/events/' + event['_id'] } style={
+                {
+                    textDecoration: 'none',
+                    color: '#14487e'
+                }
+            }>
                 {JSON.stringify(event)}
             </Link>
         </Grid>)
