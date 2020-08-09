@@ -9,7 +9,7 @@ class Banner extends Component {
             objectFit: "cover",
             height: "75h",
         }
-        return (<img src={splashImage} style={style}/>);
+        return (<img src={splashImage} style={style} alt=''/>);
     }
 }
 

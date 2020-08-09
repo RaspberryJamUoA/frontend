@@ -26,11 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="513a1dd3-c460-4968-b679-16e3219f5f68" name="Default Changelist" comment="create event">
-      <change afterPath="$PROJECT_DIR$/../../src/components/General/Banner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../src/resources/FEATUREBANNER-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../src/resources/splash.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/containers/pages/EventListPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/containers/pages/EventListPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/components/General/Banner.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/components/General/Banner.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +118,7 @@
       <option name="presentableId" value="Default" />
       <updated>1596857747691</updated>
       <workItem from="1596857749319" duration="11684000" />
-      <workItem from="1596926890639" duration="13558000" />
+      <workItem from="1596926890639" duration="13603000" />
     </task>
     <task id="LOCAL-00001" summary="colors">
       <created>1596926074531</created>
