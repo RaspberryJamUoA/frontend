@@ -25,12 +25,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="513a1dd3-c460-4968-b679-16e3219f5f68" name="Default Changelist" comment="">
+    <list default="true" id="513a1dd3-c460-4968-b679-16e3219f5f68" name="Default Changelist" comment="create event">
+      <change afterPath="$PROJECT_DIR$/../../src/components/General/Banner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/resources/FEATUREBANNER-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/resources/splash.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/components/General/EventTile.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/components/General/EventTile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/components/General/EventTile.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/components/General/EventTile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/components/General/Searchbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/components/Search/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/components/Search/SearchBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../src/containers/pages/EventListPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/containers/pages/EventListPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,8 +41,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -123,7 +122,7 @@
       <option name="presentableId" value="Default" />
       <updated>1596857747691</updated>
       <workItem from="1596857749319" duration="11684000" />
-      <workItem from="1596926890639" duration="11689000" />
+      <workItem from="1596926890639" duration="13558000" />
     </task>
     <task id="LOCAL-00001" summary="colors">
       <created>1596926074531</created>
@@ -174,7 +173,35 @@
       <option name="project" value="LOCAL" />
       <updated>1596940368442</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="link to event details, spacing, layout change, still bugged favourite icon">
+      <created>1596943704787</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1596943704787</updated>
+    </task>
+    <task id="LOCAL-00009" summary="alignment like button">
+      <created>1596943981899</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1596943981899</updated>
+    </task>
+    <task id="LOCAL-00010" summary="color changes. paper elevation">
+      <created>1596944249332</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1596944249332</updated>
+    </task>
+    <task id="LOCAL-00011" summary="create event">
+      <created>1596945459767</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1596945459767</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,7 +227,11 @@
     <MESSAGE value="header spacing" />
     <MESSAGE value="event listing fetch implemented" />
     <MESSAGE value="frontend styling appbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="frontend styling appbar" />
+    <MESSAGE value="link to event details, spacing, layout change, still bugged favourite icon" />
+    <MESSAGE value="alignment like button" />
+    <MESSAGE value="color changes. paper elevation" />
+    <MESSAGE value="create event" />
+    <option name="LAST_COMMIT_MESSAGE" value="create event" />
   </component>
   <component name="WindowStateProjectService">
     <state width="518" height="1122" key="GridCell.Tab.0.bottom" timestamp="1596935593069">
@@ -223,21 +254,21 @@
       <screen x="57" y="23" width="1991" height="1257" />
     </state>
     <state width="500" height="445" key="SwitcherDM/57.23.1991.1257@57.23.1991.1257" timestamp="1596940184391" />
-    <state x="652" y="387" key="Vcs.Push.Dialog.v2" timestamp="1596937416486">
+    <state x="652" y="387" key="Vcs.Push.Dialog.v2" timestamp="1596944253384">
       <screen x="57" y="23" width="1991" height="1257" />
     </state>
-    <state x="652" y="387" key="Vcs.Push.Dialog.v2/57.23.1991.1257@57.23.1991.1257" timestamp="1596937416486" />
-    <state x="751" y="390" width="602" height="522" key="find.popup" timestamp="1596940971844">
+    <state x="652" y="387" key="Vcs.Push.Dialog.v2/57.23.1991.1257@57.23.1991.1257" timestamp="1596944253384" />
+    <state x="751" y="390" width="602" height="522" key="find.popup" timestamp="1596943819138">
       <screen x="57" y="23" width="1991" height="1257" />
     </state>
-    <state x="751" y="390" width="602" height="522" key="find.popup/57.23.1991.1257@57.23.1991.1257" timestamp="1596940971844" />
+    <state x="751" y="390" width="602" height="522" key="find.popup/57.23.1991.1257@57.23.1991.1257" timestamp="1596943819138" />
     <state x="717" y="306" width="670" height="675" key="run.anything.popup" timestamp="1596864375836">
       <screen x="57" y="23" width="1991" height="1257" />
     </state>
     <state x="717" y="306" width="670" height="675" key="run.anything.popup/57.23.1991.1257@57.23.1991.1257" timestamp="1596864375836" />
-    <state x="717" y="308" width="670" height="676" key="search.everywhere.popup" timestamp="1596942509685">
+    <state x="717" y="308" width="670" height="676" key="search.everywhere.popup" timestamp="1596944251591">
       <screen x="57" y="23" width="1991" height="1257" />
     </state>
-    <state x="717" y="308" width="670" height="676" key="search.everywhere.popup/57.23.1991.1257@57.23.1991.1257" timestamp="1596942509685" />
+    <state x="717" y="308" width="670" height="676" key="search.everywhere.popup/57.23.1991.1257@57.23.1991.1257" timestamp="1596944251591" />
   </component>
 </project>
