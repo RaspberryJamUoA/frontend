@@ -1,6 +1,7 @@
 import React from 'react';
 
-import {Grid} from '@material-ui/core';
+import SearchBar from '../../components/Search/SearchBar';
+import {Grid, makeStyles} from '@material-ui/core';
 
 import {connect} from "react-redux";
 import {updateEvents} from "../../store/events/eventActions";
@@ -19,11 +20,19 @@ class EventListPage extends React.Component {
             </Grid>)
         );
 
+        const style = {
+            border: "2px solid red",
+        }
+
         // console.log(this.props.eventsList)
 
-        return (<React.Fragment>
-            {eventJSX}
-        </React.Fragment>);
+        return (
+            <React.Fragment>
+                <SearchBar
+                />
+                {eventJSX}
+            </React.Fragment>
+        );
     }
 }
 
