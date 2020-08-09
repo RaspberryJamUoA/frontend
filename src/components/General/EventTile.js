@@ -32,7 +32,6 @@ class EventTile extends Component {
     }
 
     render() {
-        console.log(this.props.imgLink);
         const dateString = this.formatDate();
         return (
             <div className="body">
