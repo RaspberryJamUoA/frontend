@@ -4,6 +4,7 @@ import {Grid} from '@material-ui/core';
 
 import {connect} from "react-redux";
 import {updateEvents} from "../../store/events/eventActions";
+import EventTile from "../../components/General/EventTile";
 
 class EventListPage extends React.Component {
 
@@ -13,9 +14,12 @@ class EventListPage extends React.Component {
 
     render() {
 
+
         const eventJSX = this.props.events.map((event, i) => (
             <Grid item xs={12} key={i}>
-                {JSON.stringify(event)}
+                {/* {JSON.stringify(event)} */}
+                
+                <EventTile eventName = {event.eventName} dateTime = {event.dateTime} clubName= {event.clubName} description = {event.description} cost = {event.cost}/>
             </Grid>)
         );
 

@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-
+import React, { Component } from 'react';
+import './EventTile.css'
 
 /* Takes props eventName, dateTime, clubName, image, clubLogo */
 class EventTile extends Component {
@@ -7,18 +7,46 @@ class EventTile extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {}
+        this.state = {
+            liked: false
+        }
+    }
+
+    handleLikeClicked() {
+        this.setState({
+            liked: !this.state.liked
+        })
+    }
+
+    heartSrc() {
+        return this.state.liked ? 'https://i.imgur.com/JwXaLtf.png' : 'https://i.imgur.com/x4vFBKq.png';
+    }
+
+    formatDate() {
+        const date = new Date(this.props.dateTime);
+        return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes() + "0";
     }
 
     render() {
-        return (
-            <div>
-                <img className='event-image' src={this.props.image} alt='Event'/>
-                <h3 className='event-title'>{this.props.eventName}</h3>
-                <h4 className='event-time'>{this.props.dateTime}</h4>
-                <h4 className='event-clubname'>{this.props.clubName}</h4>
+        const dateString = this.formatDate();
 
-                <img className='event-club-logo' src={this.props.clubLogo} alt='Club'/>
+        return (
+            <div className="body">
+                <div className="events">
+                    <div className='cardContent'>
+                        <h2 className="title"><strong>{this.props.eventName}</strong></h2>
+                        <h5 className="date"><i className='far fa-calendar-alt'></i>  {dateString}</h5>
+                        <p className="description">{this.props.description}</p>
+                        <p> <i className='fas fa-dollar-sign'></i> {(this.props.cost > 0) ?  this.props.cost : 'Free' }</p>
+                    </div>
+
+                    <div className="imgContainer">
+                        <div className="heartOverlay" onClick={() => this.handleLikeClicked()}> 
+                            <img id="heart" className="loveheart" src={this.heartSrc()} alt="heartImg" width="50px" height="50px"></img>
+                        </div>
+                        <img className="eventImage" src="https://i.imgur.com/kuHv2UZ.png" alt="eventImg" width="400px" height="300px" ></img>
+                    </div>
+                </div>
             </div>
         );
     }
