@@ -31,6 +31,12 @@ export const SearchBar = () => {
                 return true;
             }
 
+            if ((event.clubName).toLowerCase().includes(searchTerm.toLowerCase())) {
+                return true;
+            } if ((event.eventName).toLowerCase().includes(searchTerm.toLowerCase())) {
+                return true;
+            }
+
             if ((event.description).toLowerCase().includes(searchTerm.toLowerCase())) {
                 return true;
             }
