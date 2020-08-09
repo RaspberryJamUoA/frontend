@@ -4,6 +4,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import {LoginButton} from '../Auth/LoginButton';
 import {LogoutButton} from '../Auth/LogoutButton';
 import {useAuth0} from '@auth0/auth0-react';
+import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     menuButton: {
@@ -12,6 +13,10 @@ const useStyles = makeStyles((theme) => ({
     title: {
         flexGrow: 1,
     },
+    link: {
+        textDecoration: 'none',
+        color: theme.palette.text.secondary
+    }
 }));
 
 export const AppHeader = () => {
@@ -27,7 +32,9 @@ export const AppHeader = () => {
                     <MenuIcon/>
                 </IconButton>
                 <Typography variant="h6" className={classes.title}>
-                    News
+                    <Link to={'/'} className={classes.link}>
+                        Home
+                    </Link>
                 </Typography>
                 {
                     !isAuthenticated &&
