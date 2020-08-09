@@ -1,47 +1,39 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import SearchBar from '../../components/Search/SearchBar';
-import {Grid, makeStyles} from '@material-ui/core';
+import {Grid} from '@material-ui/core';
 
-import {connect} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {updateEvents} from "../../store/events/eventActions";
 import EventTile from "../../components/General/EventTile";
 
-class EventListPage extends React.Component {
+const EventListPage = () => {
 
-    componentDidMount() {
-        this.props.updateEvents()
-    }
+    const dispatch = useDispatch();
+    const events = useSelector(s => s.event.events);
 
-    render() {
+    useEffect(() => {
+        dispatch(updateEvents());
+    }, [])
 
 
-        const eventJSX = this.props.events.map((event, i) => (
-            <Grid item xs={12} key={i}>
-                {/* {JSON.stringify(event)} */}
-                
-                <EventTile eventName = {event.eventName} dateTime = {event.dateTime} clubName= {event.clubName} description = {event.description} cost = {event.cost}/>
-            </Grid>)
-        );
+    const eventJSX = events.map((event, i) => (
+        <Grid item xs={12} key={i}>
+            <EventTile eventName={event.eventName} dateTime={event.dateTime} clubName={event.clubName}
+                       description={event.description} cost={event.cost}/>
+        </Grid>)
+    );
 
-        const style = {
-            border: "2px solid red",
-        }
+    // console.log(this.props.eventsList)
 
-        // console.log(this.props.eventsList)
+    return (
+        <React.Fragment>
+            <SearchBar/>
+            {eventJSX}
+        </React.Fragment>
+    );
 
-        return (
-            <React.Fragment>
-                <SearchBar
-                />
-                {eventJSX}
-            </React.Fragment>
-        );
-    }
+
 }
 
-const mapStateToProps = state => ({
-    events: state.event.events
-})
-
-export default connect(mapStateToProps, {updateEvents})(EventListPage);
+export default EventListPage;
