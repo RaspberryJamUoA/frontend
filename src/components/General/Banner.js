@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import splashImage from '../../resources/FEATUREBANNER-01.jpg';
-import { CardMedia } from '@material-ui/core';
 
 class Banner extends Component {
 

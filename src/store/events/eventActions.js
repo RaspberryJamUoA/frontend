@@ -20,4 +20,8 @@ export const updateEvents = () => {
 }
 
 export const ADD_EVENT = 'ADD_EVENT';
-export const addEvent = (event) => makeAction(ADD_EVENT, event);
+export const addEvent = (event) => {
+    return (dispatch, store) => {
+        dispatch(makeAction(ADD_EVENT, event));
+    }
+}

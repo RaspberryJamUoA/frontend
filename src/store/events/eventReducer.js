@@ -13,11 +13,15 @@ const eventReducer = (state = initialState, action) => {
         case SET_INITIAL:
             return {...state, initialEvents: action.payload}
         case ADD_EVENT:
+
             const eventsCopy = [...state.events];
 
             eventsCopy.push(action.payload);
 
-            state.events = eventsCopy;
+            state = {
+                ...state,
+                events: eventsCopy
+            };
             break;
         default:
             return state;
