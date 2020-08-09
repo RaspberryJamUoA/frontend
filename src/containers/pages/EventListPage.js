@@ -6,6 +6,7 @@ import {Grid} from '@material-ui/core';
 import {useDispatch, useSelector} from "react-redux";
 import {updateEvents} from "../../store/events/eventActions";
 import EventTile from "../../components/General/EventTile";
+import Banner from "../../components/General/Banner.js";
 
 const EventListPage = () => {
 
@@ -29,6 +30,7 @@ const EventListPage = () => {
     return (
         <React.Fragment>
             <SearchBar/>
+            <Banner />
             {eventJSX}
         </React.Fragment>
     );
