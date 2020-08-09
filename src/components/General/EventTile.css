@@ -1,7 +1,7 @@
 .title {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
-    color: #bd9242;
+    color: #00467f;
     font-weight: normal;
     padding-top: 40;
     margin: 0;
@@ -9,7 +9,7 @@
 }
 
 .date {
-    color: #bd9242;
+    color: #00467f;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
@@ -22,10 +22,11 @@
     display: flex;
     padding: 10px;
     padding-left: 30px;
-    border: 1px #bd9242;
-    border-style: solid;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* border: 1px #bd9242; */
+    /* border-style: solid; */
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     border-radius: 30px;
+    background-color: #fafafa;
   }
 
 .description {

@@ -20,7 +20,7 @@ const EventListPage = () => {
     const eventJSX = events.map((event, i) => (
         <Grid item xs={12} key={i}>
             <EventTile eventName={event.eventName} dateTime={event.dateTime} clubName={event.clubName}
-                       description={event.description} cost={event.cost}/>
+                       description={event.description} cost={event.cost} imgLink={event.imageLink}/>
         </Grid>)
     );
 
